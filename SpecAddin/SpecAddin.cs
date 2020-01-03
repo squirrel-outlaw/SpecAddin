@@ -28,12 +28,19 @@ namespace Aveva.Pdms.Examples
             sCommandBarManager = (CommandBarManager)sServiceManager.GetService(typeof(CommandBarManager));
 
             //Add ExampleCommand to Command Manager
-            sCommandManager.Commands.Add(new SpecCommand());
+
+            SpecForm specForm = new SpecForm(); 
+            SpecCommand command1 = new SpecCommand();
+            command1.specForm = specForm;
+             sCommandManager.Commands.Add(command1);
+
 
             //Create example toolbar menu
             CommandBar myToolBar = sCommandBarManager.CommandBars.AddCommandBar("SpecCommandBar");
             sCommandBarManager.RootTools.AddButtonTool("SpecCommand", "temp", null, "SpecCommand");
             myToolBar.Tools.AddTool("SpecCommand");
+     
+            
         }
 
         void Aveva.ApplicationFramework.IAddin.Stop()

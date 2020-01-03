@@ -37,6 +37,9 @@
     <Reference Include="Aveva.ApplicationFramework.Presentation">
       <HintPath>..\..\..\..\..\..\AVEVA\Plant\PDMS12.0.SP4\Aveva.ApplicationFramework.Presentation.dll</HintPath>
     </Reference>
+    <Reference Include="Aveva.Pdms.Database">
+      <HintPath>..\..\..\..\..\..\AVEVA\Plant\PDMS12.0.SP4\Aveva.Pdms.Database.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -47,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBService.cs" />
     <Compile Include="SpecCommand.cs" />
     <Compile Include="SpecAddin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

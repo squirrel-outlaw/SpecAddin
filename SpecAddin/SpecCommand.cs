@@ -11,6 +11,9 @@ namespace Aveva.Pdms.Spec
     /// </summary>
     public class SpecCommand : Aveva.ApplicationFramework.Presentation.Command
     {
+        public SpecForm specForm;
+
+        
         public SpecCommand()
         {
             Key = "SpecCommand"; 
@@ -18,7 +21,7 @@ namespace Aveva.Pdms.Spec
 
         public override void Execute()
         {
-                 
+            specForm.Show();
         }
     }
 }
